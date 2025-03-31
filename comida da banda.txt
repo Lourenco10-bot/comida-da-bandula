@@ -1,0 +1,76 @@
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Prato 1">
+                <h3>Frango Grelhado</h3>
+                <p>Frango grelhado com legumes e arroz basmati.</p>
+                <p class="price">12,50 €</p>
+            </div>
+            
+            <!-- Prato 2 -->
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Prato 2">
+                <h3>Pizza Margherita</h3>
+                <p>Pizza tradicional com molho de tomate, queijo e manjericão.</p>
+                <p class="price">10,00 €</p>
+            </div>
+            
+            <!-- Prato 3 -->
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb" alt="Prato 3">
+                <h3>Salmão com Purê</h3>
+                <p>Salmão grelhado com purê de batata e espinafres.</p>
+                <p class="price">15,00 €</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pedidos -->
+    <section class="order-section" id="pedidos">
+        <h2>Faça seu Pedido</h2>
+        <form id="order-form">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="tel" placeholder="Telefone" required>
+            <input type="date" id="order-date" required>
+            <select id="order-time" required>
+                <option value="">Selecione o horário</option>
+                <option value="12:00-13:00">12:00 - 13:00</option>
+                <option value="13:00-14:00">13:00 - 14:00</option>
+                <option value="19:00-20:00">19:00 - 20:00</option>
+                <option value="20:00-21:00">20:00 - 21:00</option>
+            </select>
+            <textarea placeholder="Seu pedido (ex: 1x Frango Grelhado, 2x Pizza)" required></textarea>
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact" id="contato">
+        <h2>Contactos</h2>
+        <p><strong>Endereço:</strong> Rua das Delícias, 123, Lisboa</p>
+        <p><strong>Telefone:</strong> +351 912 345 678</p>
+        <p><strong>Email:</strong> contato@saborearte.com</p>
+        
+        <div class="social-links">
+            <a href="#" target="_blank">📱 Facebook</a>
+            <a href="#" target="_blank">📸 Instagram</a>
+            <a href="#" target="_blank">🎵 TikTok</a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p><strong>Horário de Retirada:</strong> Seg-Sex: 12h-15h / 19h-22h | Sáb: 12h-23h</p>
+        <p>&copy; 2023 Sabor & Arte. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Script para definir a data mínima como hoje
+        document.getElementById('order-date').min = new Date().toISOString().split('T')[0];
+        
+        // Envio do formulário (simulação)
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Pedido enviado com sucesso! Entraremos em contato para confirmar.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
